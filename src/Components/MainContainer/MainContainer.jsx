@@ -1,18 +1,19 @@
 import React from "react";
 import Sidebar from "../Sidebar/Sidebar";
-import { Outlet } from "react-router-dom";
-import WorkArea from "../WorkArea/WorkArea";
+
 import "../../index.css";
+import ChatArea from "../Chat-Area/ChatArea";
 
 const MainContainer = () => {
   return (
-    <div className="flex justify-between h-[90vh] w-[90vw] bg-slate-100 rounded-3xl gap-5">
-      <div  className="w-[30%] bg-red-800">
-      <Sidebar ></Sidebar>
+    <div className="flex justify-between h-[90vh] w-[90vw] bg-teal-100 rounded-3xl gap-5 p-5">
+      <div className="w-[30%] overflow-y-auto scrollbar">
+        <Sidebar></Sidebar>
       </div>
-      <div className="bg-blue-500 w-[70%]">
-      <WorkArea></WorkArea>
+      <div className=" w-[70%]">
+        <ChatArea></ChatArea>
       </div>
+
       {/* <div>
         <Outlet></Outlet>
       </div> */}
